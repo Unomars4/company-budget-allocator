@@ -3,9 +3,10 @@ import Allocator from './components/Allocator';
 import ChangeAllocation from './components/ChangeAllocation';
 import TableAllocation from './components/TableAllocation';
 import {Department} from './types';
+import data from "../data/departments";
 
 const App = () => {
-    const [allocatedDepartments, setDepartments] = useState<Department[] | undefined>([{name: "Marketing", amountAllocated: 500}]);
+    const [allocatedDepartments, setDepartments] = useState<Department[] | undefined>(data);
 
     return (
         <main>

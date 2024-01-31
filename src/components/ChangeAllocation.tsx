@@ -29,7 +29,7 @@ const ChangeAllocation = ({departments}: {departments: Department[] | undefined}
                         </select>
                     </datalist>
                 </div>
-                <button onClick={saveAllocation} className="p-2 rounded-xl text-sm bg-blue-400 font-white" type="submit">Save</button>
+                <button onClick={saveAllocation} className="p-2 rounded-xl text-sm bg-blue-400 text-white" type="submit">Save</button>
             </form>
         </section>
     );
