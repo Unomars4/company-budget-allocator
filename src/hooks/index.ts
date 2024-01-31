@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {InputField} from "../types";
+import {Budget, Department, InputField} from "../types";
 
 export const useInputField = (type: string): InputField => {
     const [value, setValue] = useState<string | number | undefined>();
@@ -18,3 +18,4 @@ export const useInputField = (type: string): InputField => {
         value
     }
 }
+

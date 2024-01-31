@@ -8,3 +8,9 @@ export type Department = {
     name: string,
     amountAllocated: number
 }
+
+export type Budget = {
+    budget: number,
+    remaining: number,
+    spent: number
+}

@@ -18,10 +18,10 @@ const TableAllocation = ({departments}: {departments: Department[] | undefined})
                             <td>{d.name}</td>
                             <td>{d.amountAllocated}</td>
                             <td>
-                                <button className="p-2 rounded-full text-white-0 bg-green-400" type="button">+</button>
+                                <button className="p-3 rounded-full text-white text-md bg-green-400" type="button">+</button>
                             </td>
                             <td>
-                                <button className="p-2 rounded-full text-white-0 bg-red-400" type="button">-</button>
+                                <button className="p-2 rounded-full text-white text-md bg-red-400" type="button">-</button>
                             </td>
                         </tr>
                     )) : null}
