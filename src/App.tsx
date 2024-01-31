@@ -1,15 +1,18 @@
 import {useState} from 'react';
 import Allocator from './components/Allocator';
 import TableAllocation from './components/TableAllocation';
+import {Department} from './types';
 
 const App = () => {
+    const [allocatedDepartments, setDepartments] = useState<Department[] | undefined>(undefined);
+
     return (
         <main>
             <h1 className='text-2xl font-bold'>Company's Budget Allocation</h1>
             <Allocator />
-            <h3 className='text-l'>Allocation</h3>
-            <TableAllocation />
-            <h3 className='text-l'>Change Allocation</h3>
+            <h3 className='text-xl font-bold mb-3'>Allocation</h3>
+            <TableAllocation departments={allocatedDepartments} />
+            <h3 className='text-xl font-bold mb-3'>Change Allocation</h3>
         </main>
     );
 }

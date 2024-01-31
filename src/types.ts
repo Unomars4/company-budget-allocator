@@ -4,6 +4,7 @@ export type InputField = {
     onChange: (arg0: React.SyntheticEvent) => void
 }
 
-export interface IAllocator {
-    inputHandler: InputField
+export type Department = {
+    name: string,
+    amountAllocated: number
 }
