@@ -6,18 +6,18 @@ const App = () => {
 
     return (
         <main>
-            <h1>Company's Budget Allocation</h1>
-            <section>
-                <article className='rounded-sm bg-slate-100'>
-                    <label>
+            <h1 className='text-xl font-bold'>Company's Budget Allocation</h1>
+            <section className='flex flex-row justify-evenly my-3'>
+                <article className='p-2 mx-2 rounded-md bg-slate-100'>
+                    <label className='text-sm'>
                         Budget: <input {...budgetInput} />
                     </label>
                 </article>
-                <article className='rounded-sm bg-green-100'>
-                    <p>Remaining: ${budgetInput.value} </p>
+                <article className='p-2 mx-2 rounded-md bg-green-100'>
+                    <p className='text-green-500 text-sm'>Remaining: ${budgetInput.value} </p>
                 </article>
-                <article className='rounded-sm bg-red-200'>
-                    <p>Spent so far: $</p>
+                <article className='p-2 mx-2 rounded-md bg-red-200'>
+                    <p className='text-red-500 text-sm'>Spent so far: $</p>
                 </article>
             </section>
         </main>
