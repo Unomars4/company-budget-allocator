@@ -1,14 +1,15 @@
 import {useState} from 'react';
-import {useInputField} from './hooks';
 import Allocator from './components/Allocator';
+import TableAllocation from './components/TableAllocation';
 
 const App = () => {
-    const budgetInput = useInputField('number');
-
     return (
         <main>
-            <h1 className='text-xl font-bold'>Company's Budget Allocation</h1>
-            <Allocator inputHandler={budgetInput} />
+            <h1 className='text-2xl font-bold'>Company's Budget Allocation</h1>
+            <Allocator />
+            <h3 className='text-l'>Allocation</h3>
+            <TableAllocation />
+            <h3 className='text-l'>Change Allocation</h3>
         </main>
     );
 }
