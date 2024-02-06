@@ -1,15 +1,13 @@
-import {useState} from "react";
-import {Budget, Department, InputField} from "../types";
+import {useBudgetStore} from "../store";
+import {InputField} from "../types";
 
 export const useInputField = (type: string): InputField => {
-    const [value, setValue] = useState<string | number | undefined>();
 
     const onChange = (event: React.SyntheticEvent) => {
-        if (type === 'number') {
-            setValue(Number(event.target.value));
+
+        if (typeof value === 'number') {
             return;
         }
-        setValue(event.target.value);
     };
 
     return {

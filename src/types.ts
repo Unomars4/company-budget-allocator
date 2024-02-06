@@ -9,8 +9,13 @@ export type Department = {
     amountAllocated: number
 }
 
-export type Budget = {
+export type State = {
     budget: number,
-    remaining: number,
+    data: Department[],
     spent: number
+}
+
+export type Actions = {
+    setBudget: (amt: number) => void;
+    calcSpent: () => void
 }

@@ -1,6 +1,9 @@
+import {useBudgetStore} from "../store";
 import {Department} from "../types";
 
-const TableAllocation = ({departments}: {departments: Department[] | undefined}) => {
+const TableAllocation = () => {
+    const departments: Department[] = useBudgetStore((state) => state.data);
+
     return (
         <section className="mb-3">
             <table className="w-full text-left">
@@ -10,6 +13,7 @@ const TableAllocation = ({departments}: {departments: Department[] | undefined})
                         <th>Allocated Budget</th>
                         <th>Increase by 10</th>
                         <th>Decrease by 10</th>
+                        <th>Delete Department</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,6 +26,9 @@ const TableAllocation = ({departments}: {departments: Department[] | undefined})
                             </td>
                             <td>
                                 <button className="p-1 rounded-full text-white text-center text-2xl bg-red-400" type="button">-</button>
+                            </td>
+                            <td>
+                                <button className="p-1 rounded-full text-white text-center text-2xl bg-black" type="button">x</button>
                             </td>
                         </tr>
                     )) : null}

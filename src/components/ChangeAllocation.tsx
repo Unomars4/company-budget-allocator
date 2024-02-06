@@ -1,6 +1,8 @@
+import {useBudgetStore} from "../store";
 import {Department} from "../types";
 
-const ChangeAllocation = ({departments}: {departments: Department[] | undefined}) => {
+const ChangeAllocation = () => {
+    const departments: Department[] = useBudgetStore((state) => state.data);
 
     const saveAllocation = (event: React.SyntheticEvent) => {
         event.preventDefault();
