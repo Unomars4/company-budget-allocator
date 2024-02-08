@@ -1,21 +1,25 @@
-import {Department} from "../src/types";
+import {DepartmentAllocation} from "../src/types";
 
-const data: Department[] = [
+const data: DepartmentAllocation[] = [
     {
         name: "Marketing",
-        amountAllocated: 500,
+        amount: 15800,
     },
     {
         name: "Sales",
-        amountAllocated: 300,
-    },
-    {
-        name: "Human Resource",
-        amountAllocated: 650,
+        amount: 1000,
     },
     {
         name: "IT",
-        amountAllocated: 1000,
+        amount: 1000,
+    },
+    {
+        name: "Finance",
+        amount: 1000,
+    },
+    {
+        name: "Human Resources",
+        amount: 1000,
     }
 ];
 

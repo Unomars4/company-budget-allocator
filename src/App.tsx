@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import Allocator from './components/Allocator';
 import ChangeAllocation from './components/ChangeAllocation';
 import TableAllocation from './components/TableAllocation';
